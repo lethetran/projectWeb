@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mac</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="mac.css">
+        <html lang="en"></html>
+    </head>
+    <body>
+        <div class="menu">
+            <div class="menu1">
+                <ul id="menu">
+                    <li><a href="#"><ion-icon name="logo-apple"></ion-icon></a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPhone</a></li>
+                </ul>
+            </div>
+
+            <nav id="menunav">
+                <div class="menu2">
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/macbookAir.svg" alt="macAir" class="menunav-icon">
+                                <span class="menunav-label">MacBook Aỉ</span>
+                                <span class="menunav-new">New</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/macbookPro.svg" alt="macbookPro" class="menunav-icon">
+                                <span class="menunav-label">MacBook Pro</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/imac.svg" alt="iMac" class="menunav-icon">
+                                <span class="menunav-label">iMac</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/macMini.svg" alt="macMini" class="menunav-icon" height="80px" width="50px">
+                                <span class="menunav-label">Mac mini</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/macStudio.svg" alt="macStudio" class="menunav-icon" height="80px" width="50px">
+                                <span class="menunav-label">Mac Studio</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="./image/macPro.svg" alt="macPro" class="menunav-icon" height="100px" width="50px">
+                                <span class="menunav-label">Mac Pro</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="main">
+                <div class="main-content">
+                    <header class="main-header">
+                        <h1 class="main-header-headline">Mac</h1>
+                        <div class="main-header-copy">
+                            <p>"If you can dream it, "
+                                <br>
+                                "Mac can do it"
+                            </p>
+                        </div>
+                    </header>
+                </div>
+                    <div class="video-wall-container">
+                        <div class="video-wall-content-container">
+                            <video class="video-wall" autoplay muted loop id="myVideo">
+                                <source src="./image/medium.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-srcim"></div>
+                        <div class="video-controls-container">
+                            <ion-icon id="myBtn" name="pause" onclick="myFunction()"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--dừng video-->
+        <script>
+            function myFunction() {
+                var myVideo = document.getElementById("myVideo");
+                var myBtn = document.getElementById("myBtn");
+                if (myVideo.paused) {
+                    myVideo.play();
+                    myBtn.name = "pause";
+                } else {
+                    myVideo.pause();
+                    myBtn.name = "play";
+                }
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
