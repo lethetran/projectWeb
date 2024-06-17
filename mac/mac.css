@@ -19,6 +19,20 @@ body {
     font-style: normal;
 }
 
+.button-top{
+    color: red;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
 
 
 #menu{
@@ -198,6 +212,7 @@ position: relative;
     margin-inline-end: auto;
     width: 87.5vw;
     max-width: 1680px;
+    padding-top:40px;
 }
 .section-header{
     display: flex;
@@ -208,7 +223,7 @@ position: relative;
     margin-top: 50px;
 }
 .section-header-headline{
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.14286;
     font-weight: 600;
     letter-spacing: 0.007em;
@@ -402,6 +417,7 @@ position: relative;
     margin-inline-end: auto;
     width: 87.5vw;
     max-width: 1680px;
+    margin-top: 50px;
 }
 .section-header {
     display: flex;
@@ -420,6 +436,8 @@ position: relative;
 }
 .accor-wrapper{
     background: #fafafa;
+    width:100%;
+    margin:auto;
 }
 .accordion {
     height: auto;
@@ -440,9 +458,12 @@ li{
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+    padding-top: 20px;
 }
 .accordion-title-text{
     text-align: start;
+    padding-left: 30px;
+    font-size: 24px;
 }
 .accordion-tray{
     overflow: visible;
@@ -451,23 +472,24 @@ li{
 }
 .accordion-content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-bottom: 40px;
 }
 .accordion-para-text{
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.4285914286;
     font-weight: 400;
     letter-spacing: -0.016em;
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    width: 30vw;
+    padding-left:30px;
 }
 .image-container{
     display: flex;
-    justify-content: center;
-    max-width: 100%;
+    justify-content: flex-start;
     pointer-events: none;
+    margin-left: 15vw;
 }
-
 
 .groups-index{
     display: flex;
@@ -482,7 +504,7 @@ li{
     color: #6e6e73;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 38px;
+    margin-left: 105px;
 }
 .index-list{
     list-style-type: none;
@@ -495,5 +517,128 @@ li{
     letter-spacing: .011em;
     font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-bottom: 5px;
-    margin-left: 38px;
+    margin-left: 105px;
 }
+
+
+/*hiển thị khung*/
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 90%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.74);
+    margin-left: 10%;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  .close {
+    position: absolute;
+    top: 45px;
+    right: 180px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: fixed;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #757575;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  .modal-topic-label{
+    font-size: 17px;
+    line-height: 1.4705882353;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  .modal-topic-label-1{
+    font-size: 17px;
+    line-height: 1.4705882353;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+  .feature-card-modal-title{
+    margin-top: 50px;
+  }
+  .modal-headline{
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .modal-headline-1{
+    font-size: 17px;
+    line-height: 1.4705882353;
+    font-weight: normal;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    unicode-bidi: isolate;
+    margin-top: 15px;
+    margin-left: 40px;
+  }
+  #img01{
+    margin-left: 40px;
+    margin-top: 30px;
+  }
